@@ -1,0 +1,12 @@
+# dist folder
+.dist
+dist
+
+# npm stuff
+node_modules
+.pnpm-debug.log
+package-lock
+
+# hummus bundles
+3f86729896ed9c76b98a.js
+8c3ff237e4512102354c.js

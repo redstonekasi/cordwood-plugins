@@ -1,0 +1,7 @@
+{
+  "name": "Replies",
+  "description": "Adds replies to hummus",
+  "author": "redstonekasi",
+  "license": "BSD-3",
+  "main": "index.jsx"
+}

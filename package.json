@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "format": "prettier -wc src/"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.49",
+    "prettier": "^2.7.1",
+    "rollup": "^2.77.0",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "yargs": "^17.5.1"
+  }
+}

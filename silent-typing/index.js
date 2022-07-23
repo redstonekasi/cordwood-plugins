@@ -1,0 +1,1 @@
+(function(n,e,o){"use strict";const d=o.instead("sendTyping",e.findByProps("sendTyping"),()=>{});return n.onUnload=d,Object.defineProperty(n,"__esModule",{value:!0}),n})({},cordwood.webpack,cordwood.patcher);

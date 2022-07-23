@@ -37,6 +37,8 @@ after(
     const Message = findInTree(res, (t) => t?.displayName === "Message");
 
     const unpatch = after("render", Message.prototype, function (args, ret) {
+      if (this.state.isEditing) return;
+      
       const messageActions = findInTree(
         ret,
         // (t) => Array.isArray(t) && t?.some((i) => i?.type?.displayName === "Popout"),

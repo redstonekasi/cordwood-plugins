@@ -88,6 +88,17 @@ async function build(args) {
   console.log("Built plugin to " + path.join(args.output, "/"));
 }
 
+async function buildAll() {
+  await fs.access(".dist").catch(() => fs.mkdir(".dist"));
+  const plugins = await fs.readdir("plugins");
+  for (const plugin of plugins) {
+    await build({
+      plugin,
+      output: path.join(".dist", plugin),
+    });
+  }
+}
+
 yargs(hideBin(process.argv))
   .command(
     ["$0 <plugin>"],
@@ -106,6 +117,16 @@ yargs(hideBin(process.argv))
         }),
     (args) =>
       build(args).catch((err) => {
+        console.error(err.message);
+        process.exit(1);
+      }),
+  )
+  .command(
+    ["all"],
+    "Builds all plugins",
+    () => {},
+    () =>
+      buildAll().catch((err) => {
         console.error(err.message);
         process.exit(1);
       }),

@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "format": "prettier -wc src/"
+    "format": "prettier -wc src/",
+    "build": "node build.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.14.49",

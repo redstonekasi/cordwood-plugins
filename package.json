@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "format": "prettier -wc src/",
+    "format": "prettier -wc plugins/",
     "build": "node build.mjs"
   },
   "devDependencies": {

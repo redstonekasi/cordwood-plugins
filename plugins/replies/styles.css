@@ -4,14 +4,14 @@
 
 .message-group .btn-reply {
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
   float: right;
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
 
-.message-group .comment>div:hover .btn-reply,
-.message-group .system-message>div:hover .btn-reply {
-  opacity: .4;
+.message-group .comment > div:hover .btn-reply,
+.message-group .system-message > div:hover .btn-reply {
+  opacity: 0.4;
 }
